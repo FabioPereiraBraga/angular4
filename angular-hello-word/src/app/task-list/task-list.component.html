@@ -1,0 +1,9 @@
+
+
+<ul>
+  <li *ngFor="let iten of tasks">
+     {{iten.name |  uppercase }} --
+     {{iten.value | formatMoney}} --
+     {{iten.data | formatDate}}
+    </li>
+</ul>
