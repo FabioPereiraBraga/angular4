@@ -1,0 +1,33 @@
+
+<div class="container">
+  <div class="col-12">
+
+
+  <div class="form-group" [ngClass]="{'is-invalid': !mail.valid}" >
+    <label for="exampleInputEmail1">Email address</label>
+    <input required type="email" email  #mail="ngModel" class="form-control" [(ngModel)]='email' id="exampleInputEmail1" placeholder="Email">
+    <span class="help-block" *ngIf="mail.errors && (mail.dirty || mail.touched)">
+            <ul>
+              <li *ngIf="mail.errors.required">
+                O campo email é requerido
+              </li>
+              <li *ngIf="mail.errors.email">
+                O campo email é invalido
+              </li>
+            </ul>
+          </span>
+  </div>
+  <div class="form-group">
+    <label for="nome">Nome</label>
+  <input required type="text" #name="ngModel" class="form-control" [(ngModel)]='nome' id="nome" placeholder="Nome">
+  <span class="help-block" *ngIf="name.errors && (name.dirty || name.touched)">
+          <ul>
+            <li *ngIf="name.errors.required">
+              O campo nome é requerido
+            </li>
+          </ul>
+        </span>
+  </div>
+</div>
+
+</div>
